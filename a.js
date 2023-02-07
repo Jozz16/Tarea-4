@@ -26,7 +26,7 @@ function registrarEquipo (){
 
         let equipo = new Equipofurvol(nombre.value, poblacion.value, capitan.value)
         equiposIncritos.push(equipo)
-        console.log(equiposIncritos)
+        
 }
 function registrarJugador() {
     let nombreJugador = document.querySelector("#nombreJugador")
