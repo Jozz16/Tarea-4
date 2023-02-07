@@ -20,7 +20,6 @@ let equiposIncritos = []
 
 
 function registrarEquipo (){
-        
         let nombre = document.querySelector("#nombre")
         let poblacion = document.querySelector("#poblacion")
         let capitan = document.querySelector("#capitan")
@@ -29,25 +28,18 @@ function registrarEquipo (){
         equiposIncritos.push(equipo)
         console.log(equiposIncritos)
 }
-
-
 function registrarJugador() {
+    let nombreJugador = document.querySelector("#nombreJugador")
+    let apellido = document.querySelector("#apellido")
+    let rut = document.querySelector("#rut")
+    let fechaNacimiento = document.querySelector("#fechaNacimiento")
+    let NombreEquipo = document.querySelector("#NombreEquipo")
 
-        let nombreJugador = document.querySelector("#nombreJugador")
-        let apellido = document.querySelector("#apellido")
-        let rut = document.querySelector("#rut")
-        let fechaNacimiento = document.querySelector("#fechaNacimiento")
-        let NombreEquipo = document.querySelector("#NombreEquipo")
-
-        let jugador = new Jugador(nombreJugador.value, apellido.value, rut.value, fechaNacimiento.value )
-
-        
-        let equipoEncontrado = equiposIncritos.filter(elemento=> elemento.nombre === NombreEquipo.value)
+    let jugador = new Jugador(nombreJugador.value, apellido.value, rut.value, fechaNacimiento.value )   
+    let equipoEncontrado = equiposIncritos.filter(elemento=> elemento.nombre === NombreEquipo.value)
         if (equipoEncontrado === ""){
             alert("no existe ese equipo")
         } else {
-          equipoEncontrado[0].jugadores.push(jugador)  
+            equipoEncontrado[0].jugadores.push(jugador)  
         } 
-        
-        
 }
